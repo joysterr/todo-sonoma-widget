@@ -1,5 +1,6 @@
 const todoItems = []
 const todoArea = document.querySelector('.todos')
+const todoCount = document.querySelector('#counter')
 
 function addTodo() {
     const inputElement = document.querySelector('#todo-input')
@@ -9,6 +10,8 @@ function addTodo() {
     inputElement.value = ''
     
     renderTodo()
+
+    updateCount()
 }
 
 function renderTodo() {
@@ -23,4 +26,8 @@ function renderTodo() {
         todoAllHTML += html
     }
     todoArea.innerHTML = todoAllHTML
+}
+
+function updateCount() {
+    todoCount.innerHTML = todoItems.length
 }

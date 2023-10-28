@@ -12,7 +12,13 @@
             <h1 id="counter">0</h1>
             <p>today</p>
             <hr />
-            <input type="text" id="todo-input" />
+            <input
+                type="text"
+                id="todo-input"
+                onkeydown="
+                    if (event.key === 'Enter') addTodo()
+                "
+            />
             <div class="todos"></div>
         </div>
     </body>

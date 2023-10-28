@@ -48,3 +48,48 @@ body {
 #todo-input:focus {
     outline: none;
 }
+
+.todos {
+    margin: 10px 0;
+    height: 200px;
+    overflow-y: hidden;
+}
+
+.todo-check {
+    height: 18px;
+    width: 18px;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.todo-check:hover {
+    background-color: gray;
+    scale: 0.9;
+    transition: 500ms ease;
+}
+
+.todo-line {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(150, 150, 150, 0.5);
+    color: rgb(220, 220, 220);
+}
+
+@media screen and (max-width: 425px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        max-height: 100vh;
+        overflow-y: hidden;
+    }
+    .todo-check {
+        all: unset;
+        border: 1px solid gray;
+    }
+    input {
+        font-size: 16px;
+    }
+}

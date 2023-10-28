@@ -8,7 +8,7 @@ function addTodo() {
     todoItems.push(inputElement.value)
 
     inputElement.value = ''
-    
+
     renderTodo()
 
     updateCount()
@@ -18,7 +18,13 @@ function renderTodo() {
     let todoAllHTML = ''
     for (let i = 0; i < todoItems.length; i++) {
         const html = `
-            <div class='todo-line' onclick='todoItems.splice(${i},1); renderTodo(); updateCount();'>
+            <div class='todo-line' 
+                onclick='
+                    todoItems.splice(${i},1); 
+                    renderTodo(); 
+                    updateCount();
+                '
+            >
                 <button class='todo-check'></button>
                 <p>${todoItems[i]}</p>
             </div>

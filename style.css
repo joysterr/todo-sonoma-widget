@@ -29,8 +29,8 @@ body {
         rgba(170, 170, 170, 0.3),
         rgba(115, 115, 115, 0.5)
     );
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .container h1,

@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('./assets/clouds.jpg') no-repeat center;
+    background: url('./assets/clouds.webp') no-repeat center;
     background-size: cover;
     background-color: var(--dark-background);
 }
@@ -89,6 +89,33 @@ body {
     color: rgb(220, 220, 220);
 }
 
+.bg-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.bg-btn button {
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+
+    background: radial-gradient(
+        rgba(170, 170, 170, 0.3),
+        rgba(115, 115, 115, 0.5)
+    );
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.bg-btn svg {
+    display: block;
+}
+
+
 @media screen and (max-width: 425px) {
     html, body {
         margin: 0;
@@ -107,5 +134,13 @@ body {
     }
     input {
         font-size: 16px;
+    }
+
+    .bg-btn button {
+        padding: 0.5rem;
+    }
+
+    .bg-btn svg {
+        color: black;
     }
 }
